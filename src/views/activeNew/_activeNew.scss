@@ -1,0 +1,123 @@
+@import "../news/news";
+
+$green_btn: #77b300;
+
+.active-new {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 50px;
+  .green-button {
+    background: $green_btn;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+  }
+  .article-info {
+    width: 75%;
+
+    .img-div {
+      width: 35%;
+      float: left;
+      margin-right: 10px;
+      margin-top: 5px;
+      img {
+        width: 100%;
+      }
+    }
+    .content {
+      text-align: justify;
+      font-size: 14px;
+    }
+    h2 {
+      margin-top: 10px;
+    }
+    .green-button-div {
+      width: 100%;
+      text-align: left;
+      button {
+        position: relative;
+        width: 220px;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .menu-comparar {
+    width: 20%;
+    min-width: 180px;
+    color: $light_blue;
+    > p {
+      color: black;
+    }
+    > div {
+      background: rgb(238, 235, 235);
+      margin: 10px;
+      width: 90%;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .menu-column {
+      display: flex;
+      flex-direction: column;
+      text-align: -webkit-center;
+      font-size: 16px;
+      > * {
+        margin: 0px;
+      }
+      img {
+        width: 40px;
+      }
+      button {
+        width: 80%;
+        margin-top: 5px;
+      }
+    }
+    .menu-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 10px;
+      span {
+        height: auto;
+      }
+
+      .menu-row-img {
+        vertical-align: middle;
+        .icon {
+          width: 25px;
+          vertical-align: middle;
+          margin-right: 5px;
+          font-size: 14px;
+        }
+      }
+      > i {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .active-new {
+    justify-content: center;
+    margin: 0 20px;
+    .article-info {
+      width: 100%;
+      .img-div {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+
+    .menu-comparar {
+      display: none;
+    }
+  }
+}
